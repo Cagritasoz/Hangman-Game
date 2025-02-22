@@ -24,6 +24,7 @@ public class Main {
 		
 class Player {
 	
+	
 
 
 
@@ -37,7 +38,7 @@ class Player {
 class Game {
 	private String[] words = {"apple","banana","garden","blanket","astronaut","festival","labyrinth","dog","pineapple","lantern"};
 	int attemptNumber;
-	int difficultyNumber;
+	
 	
 	public Game() {
 	}
@@ -48,13 +49,6 @@ class Game {
 		Random random = new Random();
 		return words[random.nextInt(words.length)];
 	}
-	
-	public void setdifficultyNumber(int difficultyNumber) {
-		this.difficultyNumber = difficultyNumber;
-	}
-	
-	public int getdifficultyNumber() {
-		return difficultyNumber;
 	}
 	public int getattemptNumber() {
 		return attemptNumber;
