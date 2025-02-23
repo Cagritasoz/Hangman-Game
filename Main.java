@@ -1,19 +1,9 @@
-import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 public class Main {
 	public static void main(String[]args) {
-		while(true) {
-			try {
-			System.out.println("Welcome to the Hangman Game!");
-			System.out.println("----------------------------");
-			System.out.println("Please choose the games difficulty");
-			System.out.println("-- Press 1 for easy mode (Maximum 8 attempts to fail)");
-			System.out.println("-- Press 2 for medium mode (Maximum 6 attempts to fail)");
-			System.out.println("-- Press 3 for hard mode (Maximum 4 attempts to fail)");
-			
-		
-			
+		Scanner scanner = new Scanner(System.in);
 		
 		
 		
@@ -22,45 +12,54 @@ public class Main {
 		
 		
 		
-class Player {
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 	
-
-
-
-
-
-
-
-
-
-
-class Game {
-	private String[] words = {"apple","banana","garden","blanket","astronaut","festival","labyrinth","dog","pineapple","lantern"};
-	int attemptNumber;
 	
+class GameMechanics {
+	Random random = new Random();
+	private String[] things = {"absurd","frizzled","luxury","dog","gazebo","queue","lantern","table","round"};
+	private String[] characters;
+	private int attemptnumber;
 	
 	public Game() {
 	}
 	
-	
-	
-	public String getRandomWord() {
-		Random random = new Random();
-		return words[random.nextInt(words.length)];
-	}
-	}
-	public int getattemptNumber() {
-		return attemptNumber;
-	}
-	public void setattemptNumber(int attemptNumber) {
-		this.attemptNumber = attemptNumber;
+	public String[] getCharacters() {
+		String s = things[random.nextInt(things.length)];
+		characters = new String[s.length()];
+		for(int i = 0;i<s.length();i++) {
+			characters[i] = s.substring(i,i+1);
+		}
+		return characters;
 	}
 	
+	public void setAttemptNumber(int attemptnumber) {
+		this.attemptnumber = attemptnumber;
+	}
+	public int getAttemptNumber() {
+		return attemptnumber;
+	}
+	
+	
+	
+	
+	
+	
+
 		
-	
-	
-	
 		
 		
 		
